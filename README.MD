@@ -1,6 +1,7 @@
 # Unofficial Librus Python API
 
-This is an unofficial Python API for Librus Synergia. It allows you to interact with the Librus Synergia platform programmatically.
+This is an unofficial Python API for Librus Synergia. It allows you to interact with the Librus Synergia platform email system programmatically.
+It's the only api client that I know of that interacts with the new email system directly via API and is not using HTMl scraping. 
 
 ## Installation
 
