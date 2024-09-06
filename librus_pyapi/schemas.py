@@ -15,8 +15,8 @@ class MessageSnippet(BaseModel):
     senderName: str
     topic: str
     content: str
-    sendDate: str
-    readDate: str
+    sendDate: str | None
+    readDate: str | None
     tags: List
     category: Optional[None]
     otherNodeUuid: Optional[None]
@@ -48,7 +48,7 @@ class Receiver(BaseModel):
     receiverId: str
     firstName: str
     lastName: str
-    className: str
+    className: str | None
     pupilFirstName: str
     pupilLastName: str
     group: str
