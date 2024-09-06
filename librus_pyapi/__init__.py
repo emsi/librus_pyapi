@@ -7,6 +7,7 @@ class LibrusAPI:
     """
     Librus API client.
     """
+
     def __init__(self, login: str, password: str):
         self.login = login
         self.password = password
@@ -64,6 +65,18 @@ class LibrusAPI:
         """
         response = self.session.get(
             f"https://wiadomosci.librus.pl/api/{mailbox}/messages?page={page}&limit={limit}"
+        )
+        response.raise_for_status()
+        return MessageCollection(**response.json())
+
+    def unread_messages(
+        self, mailbox="inbox", page: int = 1, limit: int = 10
+    ) -> MessageCollection:
+        """
+        Get unread massages from mailbox.
+        """
+        response = self.session.get(
+            f"https://wiadomosci.librus.pl/api/{mailbox}/messages?unreadOnly=1&page={page}&limit={limit}"
         )
         response.raise_for_status()
         return MessageCollection(**response.json())
