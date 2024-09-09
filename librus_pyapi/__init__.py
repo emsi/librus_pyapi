@@ -1,6 +1,6 @@
 import requests
 
-from .schemas import Message, MessageCollection, UnreadMessagesCount
+from .schemas import Message, MessageCollection, UnreadMessagesCount, AttachmentDownloadData
 
 
 class LibrusAPI:
@@ -134,3 +134,13 @@ class LibrusAPI:
         )
         response.raise_for_status()
         return response.json()
+
+    def attachment(self, attachment_id:str, message_id:str):
+        """
+        Get attachment object by id.
+        """
+        response = self.session.get(
+            f"https://wiadomosci.librus.pl/api/attachments/{attachment_id}/messages/{message_id}"
+        )
+        response.raise_for_status()
+        return AttachmentDownloadData(**response.json())

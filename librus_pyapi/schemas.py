@@ -1,7 +1,7 @@
 from base64 import b64decode
 from typing import List, Optional
 
-from pydantic import BaseModel, validator
+from pydantic import BaseModel, validator, HttpUrl
 
 
 class MessageSnippet(BaseModel):
@@ -129,3 +129,11 @@ class UnreadMessagesCount(BaseModel):
     archiveAbsences: int
     archiveJustifications: int
     archiveTrash: int
+
+
+class AttachmentDownloadData(BaseModel):
+    """
+    Attachment download data.
+    """
+    status: str
+    downloadLink: HttpUrl
