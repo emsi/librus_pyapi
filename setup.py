@@ -1,5 +1,4 @@
 from setuptools import setup, find_packages
-import os
 
 # Load the README file's content
 with open('README.MD', 'r', encoding='utf-8') as f:
