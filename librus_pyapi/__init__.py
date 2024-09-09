@@ -143,4 +143,4 @@ class LibrusAPI:
             f"https://wiadomosci.librus.pl/api/attachments/{attachment_id}/messages/{message_id}"
         )
         response.raise_for_status()
-        return AttachmentDownloadData(**response.json())
+        return AttachmentDownloadData(**response.json()["data"])
