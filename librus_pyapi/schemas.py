@@ -52,7 +52,7 @@ class Receiver(BaseModel):
     pupilFirstName: str | None
     pupilLastName: str | None
     group: str | None
-    active: str | None
+    active: str | int | None
     otherNodeUuid: Optional[None]
     otherNodeAccountId: Optional[None]
     isCc: str | None
