@@ -82,7 +82,7 @@ class Message(BaseModel):
     otherNodeUuid: Optional[None]
     otherNodeAccountId: Optional[None]
     otherNodeMessageId: Optional[None]
-    userFirstName: str
+    userFirstName: str | None
     userLastName: str
     userClass: str
     applicationNumber: Optional[None]
