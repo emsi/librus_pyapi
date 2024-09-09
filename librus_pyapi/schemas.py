@@ -46,19 +46,19 @@ class Receiver(BaseModel):
     """
 
     receiverId: str
-    firstName: str
-    lastName: str
+    firstName: str | None
+    lastName: str | None
     className: str | None
-    pupilFirstName: str
-    pupilLastName: str
-    group: str
-    active: str
+    pupilFirstName: str | None
+    pupilLastName: str | None
+    group: str | None
+    active: str | None
     otherNodeUuid: Optional[None]
     otherNodeAccountId: Optional[None]
-    isCc: str
-    isBcc: str
-    name: str
-    groupId: str
+    isCc: str | None
+    isBcc: str | None
+    name: str | None
+    groupId: str | None
 
 
 class Message(BaseModel):
