@@ -59,9 +59,9 @@ class LibrusAPI:
         response = session.get("https://synergia.librus.pl/wiadomosci3")
         response.raise_for_status()
 
-    def massages(self, page: int = 1, limit: int = 10, mailbox="inbox") -> MessageCollection:
+    def messages(self, page: int = 1, limit: int = 10, mailbox="inbox") -> MessageCollection:
         """
-        Get massages from mailbox.
+        Get messages from mailbox.
         """
         response = self.session.get(
             f"https://wiadomosci.librus.pl/api/{mailbox}/messages?page={page}&limit={limit}"
@@ -73,7 +73,7 @@ class LibrusAPI:
         self, mailbox="inbox", page: int = 1, limit: int = 10
     ) -> MessageCollection:
         """
-        Get unread massages from mailbox.
+        Get unread messages from mailbox.
         """
         response = self.session.get(
             f"https://wiadomosci.librus.pl/api/{mailbox}/messages?unreadOnly=1&page={page}&limit={limit}"

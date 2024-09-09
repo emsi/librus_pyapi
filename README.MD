@@ -20,7 +20,7 @@ api = LibrusAPI("login", "pasłord")
 
 # listuje wiadomości z inboxa:
 # def massages(self, page: int = 1, limit: int = 10, mailbox="inbox") -> MessageCollection:
-api.massages()
+api.messages()
 
 # listuje nieprzeczytane:
 # def unread_messages_count(self, mailbox="inbox") -> UnreadMessagesCount:
