@@ -76,7 +76,7 @@ class Message(BaseModel):
     topic: str
     Message: str
     sendDate: str
-    readDate: str
+    readDate: str | None
     spam: str
     state: str
     otherNodeUuid: Optional[None]
