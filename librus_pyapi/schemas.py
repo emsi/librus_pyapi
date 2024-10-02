@@ -18,7 +18,7 @@ class MessageSnippet(BaseModel):
     sendDate: str | None
     readDate: str | None
     tags: List
-    category: Optional[None]
+    category: Optional[None|str]
     otherNodeUuid: Optional[None]
     otherNodeAccountId: Optional[None]
     isAnyFileAttached: bool
