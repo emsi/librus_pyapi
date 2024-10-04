@@ -10,7 +10,7 @@ with open('requirements.txt') as f:
 
 setup(
     name='librus_pyapi',
-    version='0.1.2',
+    version='0.1.3',
     packages=find_packages(exclude=("tests",)),  # Automatically find all packages
     url='',  # Add your project's URL
     license='GNU AFFERO GENERAL PUBLIC LICENSE',
