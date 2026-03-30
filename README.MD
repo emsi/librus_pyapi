@@ -3,10 +3,32 @@
 This is an unofficial Python API for Librus Synergia. It allows you to interact with the Librus Synergia platform email system programmatically.
 It's the only api client that I know of that interacts with the new email system directly via API and is not using HTMl scraping. 
 
+## Compatibility update (2026-03-28)
+
+Version `0.2.0` is compatible with Librus authentication changes introduced on 2026-03-28, including the Synergia OAuth bootstrap and MultiDomainLogon flow required for `wiadomosci.librus.pl` API access.
+
 ## Installation
 
-There is no installation instruction on purpose. If you want to use it you should know how to use python packages. 
-I'm sorry. It acts as a filter. Code is very simple, just see for yourself.
+This project is now managed with [uv](https://github.com/astral-sh/uv) for modern Python package management.
+
+### Using uv (recommended)
+
+```bash
+# Install the package
+uv pip install librus_pyapi
+
+# Or install from source
+uv pip install -e .
+
+# For development
+uv sync --extra dev
+```
+
+### Traditional pip
+
+```bash
+pip install librus_pyapi
+```
 
 W ogóle nie wiem czemu piszę to po angielsku. Chyba z przyzwyczajenia.
 

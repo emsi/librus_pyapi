@@ -18,7 +18,7 @@ class MessageSnippet(BaseModel):
     sendDate: str | None
     readDate: str | None
     tags: List
-    category: Optional[None|str]
+    category: Optional[None | str]
     otherNodeUuid: Optional[None]
     otherNodeAccountId: Optional[None]
     isAnyFileAttached: bool
@@ -135,5 +135,6 @@ class AttachmentDownloadData(BaseModel):
     """
     Attachment download data.
     """
+
     status: str
     downloadLink: HttpUrl
