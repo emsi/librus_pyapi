@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "librus_pyapi"
-version = "0.1.4"
+version = "0.2.0"
 description = "Unofficial Python API for Librus Synergia email system"
 readme = "README.MD"
 license = { text = "AGPL-3.0" }
