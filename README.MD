@@ -5,8 +5,26 @@ It's the only api client that I know of that interacts with the new email system
 
 ## Installation
 
-There is no installation instruction on purpose. If you want to use it you should know how to use python packages. 
-I'm sorry. It acts as a filter. Code is very simple, just see for yourself.
+This project is now managed with [uv](https://github.com/astral-sh/uv) for modern Python package management.
+
+### Using uv (recommended)
+
+```bash
+# Install the package
+uv pip install librus_pyapi
+
+# Or install from source
+uv pip install -e .
+
+# For development
+uv sync --extra dev
+```
+
+### Traditional pip
+
+```bash
+pip install librus_pyapi
+```
 
 W ogóle nie wiem czemu piszę to po angielsku. Chyba z przyzwyczajenia.
 

@@ -135,7 +135,7 @@ class LibrusAPI:
         response.raise_for_status()
         return response.json()
 
-    def attachment(self, attachment_id:str, message_id:str):
+    def attachment(self, attachment_id: str, message_id: str):
         """
         Get attachment object by id.
         """
@@ -144,3 +144,11 @@ class LibrusAPI:
         )
         response.raise_for_status()
         return AttachmentDownloadData(**response.json()["data"])
+    
+    def grades(self):
+        """
+        Get grades.
+        """
+        response = self.session.get("https://synergia.librus.pl/gateway/api/2.0/Grades")
+        response.raise_for_status()
+        return response.json()
