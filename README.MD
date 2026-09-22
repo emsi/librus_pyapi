@@ -15,19 +15,19 @@ This project is now managed with [uv](https://github.com/astral-sh/uv) for moder
 
 ```bash
 # Install the package
-uv pip install librus_pyapi
+uv pip install "git+https://github.com/emsi/librus_pyapi.git"
 
 # Or install from source
 uv pip install -e .
 
 # For development
-uv sync --extra dev
+uv sync
 ```
 
 ### Traditional pip
 
 ```bash
-pip install librus_pyapi
+pip install "git+https://github.com/emsi/librus_pyapi.git"
 ```
 
 W ogóle nie wiem czemu piszę to po angielsku. Chyba z przyzwyczajenia.

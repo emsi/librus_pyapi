@@ -27,17 +27,14 @@ dependencies = [
     "requests",
 ]
 
-[project.optional-dependencies]
-dev = [
-    "jupyter",
-    "ipython",
-    "notebook",
-]
-
 [tool.hatch.build.targets.wheel]
 packages = ["librus_pyapi"]
 
 [dependency-groups]
 dev = [
+    "ipython",
+    "ipykernel>=7.1.0",
+    "jupyter",
+    "notebook",
     "ruff>=0.14.6",
 ]
